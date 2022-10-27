@@ -1,13 +1,19 @@
+
+:root{
+    --navkolor: rgba(0, 0, 0, 0.685);
+
+}
+
 body{
     margin: 0;
-    background-color: rgb(71, 141, 206);
-    font-family: 'Inconsolata', monospace;
+    background-color: rgba(95, 46, 71, 0.534);
+    font-family: 'Quicksand', sans-serif; color: rgba(0, 0, 0, 0.788);
 }
 nav{
-    background-color: rgba(12, 3, 141, 0.527);
+    background-color: var(--navkolor);
     display: flex;
     justify-content: space-between;
-   padding: 5px;
+    padding: 0px 10px 0 10px;
 }
 
 h1{
@@ -19,21 +25,22 @@ ul{
     display: flex;
     align-self: center;
     margin: 0;
-    padding: 0;
+    padding: 0 10px 0 0;
     list-style: none;
 
 }
 li{
-    padding: 0 5px;
+    padding:0 0 0 10;
 
 }
 
 a{
-color: black;
+color: rgba(255, 255, 255, 0.842);
 text-decoration: none;
+padding: 0 0 0 10px;
 }
-header{
-border: 5px solid red;
+body > header{
+
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
@@ -43,7 +50,7 @@ padding: 10px;
 img{
     max-width: 70%;
     border-radius: 50%;
-    box-shadow: 27px 20px 44px 3px rgba(22, 3, 105, 0.527);
+    box-shadow: #000 0px 20px 40px -5px;
 }
 h2{
     margin-bottom: 0%;
@@ -52,6 +59,36 @@ p{
     margin-top: .4rem;
     line-height: 1.4rem;
 }
+
+section{
+
+    padding: 10px;
+}
+
+section div{
+    display: flex;
+    justify-content: center;
+  }  
+  
+  section div a{
+    margin:1rem;
+    font-size: 3rem;
+  }
+
+footer{
+    background-color: var(--navkolor);
+    color:rgba(255, 255, 255, 0.651);
+    padding:1rem;
+  }
+  
+  footer p{
+    margin:0rem;
+    text-align: right;
+  }
+
+
+
+
 
 @media (min-width: 768px)
     {header{
@@ -64,5 +101,20 @@ p{
 }
     header div{
     max-width: 40%;
+    }
+
+    section{
+        display: flex;
+        
+    }
+section > * {
+    flex:1;
+    max-width: 60%;
+}
+section div{
+margin:3rem;
+
+}
+
 
 }
