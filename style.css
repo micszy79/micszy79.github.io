@@ -4,7 +4,7 @@ body{
     font-family: 'Inconsolata', monospace;
 }
 nav{
-    background-color: rgba(137, 43, 226, 0.301);
+    background-color: rgba(12, 3, 141, 0.527);
     display: flex;
     justify-content: space-between;
    padding: 5px;
@@ -31,4 +31,38 @@ li{
 a{
 color: black;
 text-decoration: none;
+}
+header{
+border: 5px solid red;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+padding: 10px;
+}
+
+img{
+    max-width: 70%;
+    border-radius: 50%;
+    box-shadow: 27px 20px 44px 3px rgba(22, 3, 105, 0.527);
+}
+h2{
+    margin-bottom: 0%;
+}
+p{
+    margin-top: .4rem;
+    line-height: 1.4rem;
+}
+
+@media (min-width: 768px)
+    {header{
+    flex-wrap: nowrap;
+    align-items: center
+}
+    img{;
+    img-width: 40%;
+    margin:3rem;
+}
+    header div{
+    max-width: 40%;
+
 }
