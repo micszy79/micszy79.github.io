@@ -1,12 +1,12 @@
 
 :root{
-    --navkolor: rgba(0, 0, 0, 0.685);
+    --navkolor: rgba(10, 0, 78, 0.678);
 
 }
 
 body{
     margin: 0;
-    background-color: rgba(95, 46, 71, 0.534);
+    background-color: rgba(8, 42, 153, 0.411);
     font-family: 'Quicksand', sans-serif; color: rgba(0, 0, 0, 0.788);
 }
 nav{
@@ -97,7 +97,7 @@ footer{
     flex-wrap: nowrap;
     align-items: center
 }
-    img{;
+    img{
     img-width: 40%;
     margin:3rem;
 }
@@ -114,9 +114,5 @@ section > * {
     max-width: 60%;
 }
 section div{
-margin:3rem;
-
-}
-
-
+margin: 3rem;
 }
