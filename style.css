@@ -14,6 +14,8 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 0px 10px 5px 10px;
+    position: sticky;
+    top: 0;
 }
 
 h1{
@@ -91,7 +93,7 @@ footer{
 
 
 
-
+/* PC view */
 @media (min-width: 768px)
     {header{
     flex-wrap: nowrap;
@@ -115,4 +117,24 @@ section > * {
 }
 section div{
 margin: 3rem;
+}
+
+/* style na telefon */
+@media (max-width:768px){
+    nav ul {
+        border: 5px dashed white
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        padding-left: 20vw;
+        background-color: var(--navkolor);
+
+
+    }
+    nav ul li {
+        padding: .75rem 1 rem;
+
+    }
 }
