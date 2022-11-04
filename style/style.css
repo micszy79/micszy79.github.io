@@ -24,12 +24,14 @@
           animation: trigger 3s;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: rgba(119, 181, 252, 0.8);
   font-family: "Quicksand", sans-serif;
   margin: 0;
-  /* desktop view */
-  /* mobile view */
 }
 body a {
   color: #fff;
@@ -83,17 +85,40 @@ body p {
 body main {
   display: flex;
   flex-wrap: wrap;
+  padding: 10px;
 }
 body main header {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
-body main .content {
+body main header h2 {
+  margin-bottom: 0.83em;
+}
+body main header table {
+  border: 5px groove grey;
+  background-color: var(--navAccent);
+  color: #fff;
+}
+body main header table th {
+  background-color: rgba(255, 255, 255, 0.67);
+  padding: 0.25rem 1rem;
+  color: #000;
+}
+body main header table td {
+  background-color: rgba(11, 99, 133, 0.486);
+  padding: 0.25rem 1rem;
+}
+body main header table tr:nth-child(even) {
+  background-color: rgba(133, 115, 11, 0.486);
+}
+body .content {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main .content .watch {
+body .content .watch {
   height: 18rem;
   width: 18rem;
   background-color: #fff;
@@ -101,7 +126,7 @@ body main .content .watch {
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
-body main .content .watch .tip {
+body .content .watch .tip {
   position: absolute;
   transform-origin: bottom center;
 }
@@ -121,7 +146,7 @@ body main .content .watch .tip {
     transform: rotate(360deg);
   }
 }
-body main .content .watch .small {
+body .content .watch .small {
   top: 5%;
   height: 45%;
   width: 3px;
@@ -131,7 +156,7 @@ body main .content .watch .small {
           animation: linear rotateTip 1s infinite;
   transform: rotate(180deg);
 }
-body main .content .watch .medium {
+body .content .watch .medium {
   left: calc(50% - 5px);
   width: 10px;
   background-color: rgb(35, 32, 32);
@@ -143,7 +168,7 @@ body main .content .watch .medium {
           animation: linear rotateTip 60s infinite;
   transform: rotate(50deg);
 }
-body main .content .watch .big {
+body .content .watch .big {
   transform: rotate(-50deg);
   left: calc(50% - 8px);
   width: 16px;
@@ -155,7 +180,7 @@ body main .content .watch .big {
   -webkit-animation: linear rotateTip 360s infinite;
           animation: linear rotateTip 360s infinite;
 }
-body main .content .watch .button {
+body .content .watch .button {
   width: 25px;
   height: 25px;
   background-color: rgb(47, 42, 42);
@@ -164,55 +189,60 @@ body main .content .watch .button {
   top: calc(50% - 12.5px);
   border-radius: 50%;
 }
-body section {
+
+section {
   padding: 10px;
 }
-body section div {
+section div {
   display: flex;
   justify-content: center;
 }
-body section div a {
+section div a {
   margin: 1rem;
   font-size: 3rem;
 }
-body footer {
+
+footer {
   background-color: var(--navAccent);
   color: #fff;
   padding: 1rem;
 }
-body footer p {
+footer p {
   margin: 0rem;
   text-align: right;
 }
+
+/* desktop view */
 @media (min-width: 768px) {
-  body header {
+  header {
     flex-wrap: nowrap;
     align-items: center;
   }
-  body header div {
+  header div {
     max-width: 40%;
   }
-  body img {
+  img {
     max-width: 40%;
     margin: 3rem;
   }
-  body section {
+  section {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  body section > * {
+  section > * {
     max-width: 60%;
   }
-  body section div {
+  section div {
     margin: 3rem;
   }
 }
+/* mobile view */
 @media (max-width: 768px) {
-  body nav {
+  nav {
     height: 2rem;
   }
-  body nav ul {
+  nav ul {
     flex-direction: column;
     position: fixed;
     top: calc(10px + 2rem);
@@ -223,31 +253,31 @@ body footer p {
     text-align: right;
     transition: 0.7s;
   }
-  body nav ul li {
+  nav ul li {
     padding: 0.75rem 1rem;
   }
-  body nav #toggler:checked ~ ul {
+  nav #toggler:checked ~ ul {
     right: -40vw;
   }
-  body nav #toggler:checked ~ label div:nth-child(1) {
+  nav #toggler:checked ~ label div:nth-child(1) {
     top: 20%;
     transform: rotate(0deg);
   }
-  body nav #toggler:checked ~ label div:nth-child(2) {
+  nav #toggler:checked ~ label div:nth-child(2) {
     top: 50%;
     opacity: 1;
   }
-  body nav #toggler:checked ~ label div:nth-child(3) {
+  nav #toggler:checked ~ label div:nth-child(3) {
     transform: rotate(0deg);
     top: 80%;
   }
-  body nav label {
+  nav label {
     display: flex;
     width: 1.5em;
     height: 1.5em;
     position: relative;
   }
-  body nav label div {
+  nav div {
     background-color: #fff;
     height: 3px;
     width: 100%;
@@ -255,15 +285,15 @@ body footer p {
     border-radius: 5px;
     transition: 0.7s;
   }
-  body nav label div:nth-child(1) {
+  nav div:nth-child(1) {
     top: 50%;
     transform: rotate(225deg);
   }
-  body nav label div:nth-child(2) {
+  nav div:nth-child(2) {
     top: 50%;
     opacity: 0;
   }
-  body nav label div:nth-child(3) {
+  nav div:nth-child(3) {
     transform: rotate(-225deg);
     top: 50%;
   }
